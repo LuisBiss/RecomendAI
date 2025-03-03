@@ -4,7 +4,7 @@ import os
 import PyPDF2
 from datetime import datetime
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///NOME_DO_BANCO_AQUI.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -24,7 +24,7 @@ class Resultado(db.Model):
     colesterol = db.Column(db.Float)
     triglicerideos = db.Column(db.Float)
 
-    def _repr_(self):
+    def __repr__(self):
         return f'<Resultado {self.id} - {self.nome}>'
 
 def buscar_resultados(pdf_path):
@@ -108,7 +108,7 @@ def upload_pdf():
 def home():
     return render_template('index.html')
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     with app.app_context():
         db.create_all() 
         
