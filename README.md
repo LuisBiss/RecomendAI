@@ -2,9 +2,19 @@
 Projeto desenvolvido para a disciplina de **Projeto Integrador III**.
 
 # <sub><img src="https://github.com/user-attachments/assets/2bd91f82-43a7-44c6-8fb3-eaa3ca20089e" alt="terminal icon" width="34"></sub> Comandos
+### Criar ambiente virtual
+```
+python -m venv <nome_ambiente>
+```
+
 ### Instalar as bibliotecas
 ```
 pip install -r requirements.txt
+```
+
+### Verificar a instalação das bibliotecas
+```
+pip freeze
 ```
 
 ### Executar o servidor 
