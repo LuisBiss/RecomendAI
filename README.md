@@ -21,3 +21,7 @@ pip freeze
 ```
 pyhton app.py
 ```
+
+>[!TIP]
+>Escolha um <b>nome</b> para colocar no banco de dados SQLite criado e insira no arquivo app.py. <br>
+>Sugestão de extensão no VSCode para visualizar o binário do banco: <b>SQLite Viewer</b>
