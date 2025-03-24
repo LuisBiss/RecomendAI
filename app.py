@@ -12,6 +12,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'
 db.init_app(app)
 
+with app.app_context():
+    db.create_all()
+
 @app.route('/upload_pdf', methods=['POST'])
 def upload_pdf():
     if 'pdfExame' not in request.files:
